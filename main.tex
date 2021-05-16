@@ -1,0 +1,86 @@
+\documentclass[aspectratio=169]{beamer}	 	
+\usepackage{meupacote}
+\usetikzlibrary{arrows.meta}
+\usetheme{Warsaw}
+\setbeamercolor{normal text}{fg=white,bg=black!85}
+\setbeamercolor{structure}{fg=white}
+\setbeamercolor{alerted text}{fg=red!85!black}
+\setbeamercolor{item projected}{use=item,fg=black,bg=item.fg!35}
+\setbeamercolor*{framesubtitle}{fg=white}
+\setbeamercolor*{block title}{parent=structure,bg=black!60}
+\setbeamercolor*{block body}{fg=black,bg=black!10}
+\setbeamercolor*{block title alerted}{parent=alerted text,bg=black!15}
+\setbeamercolor*{block title example}{parent=example text,bg=black!15}
+\setbeamercolor{titlelike}{parent=structure}
+
+% para fontes matemáticas
+% Enconte mais temas e cores em http://www.hartwork.org/beamer-theme-matrix/ 
+% Veja também http://deic.uab.es/~iblanes/beamer_gallery/index.html
+
+% Customizações de Cores: fg significa cor do texto e bg é cor do fundo
+
+% informações do PDF
+\makeatletter
+\hypersetup{
+     	%pagebackref=true,
+		pdftitle={\@title}, 
+		pdfauthor={\@author},
+    	pdfsubject={Algoritmo de Tomasulu},
+	    pdfcreator={GLR},
+		pdfkeywords={Algoritmo de Tomasulu}{LaTeX}, 
+		colorlinks=true,       		% false: boxed links; true: colored links
+    	linkcolor=black,          	% color of internal links
+    	citecolor=blue,        		% color of links to bibliography
+    	filecolor=magenta,      		% color of file links
+		urlcolor=blue,
+		bookmarksdepth=4
+}
+\makeatother
+
+    \setbeamercolor{section in toc}{fg=alerted text.fg, fg = red}
+    
+
+    \definecolor{SectionBox}{RGB}{60,160,0}
+    \definecolor{UniGreen}{RGB}{ 0,139,0}
+    \definecolor{TitleGreen}{RGB}{0,120,0}
+    \setbeamercolor{title}{fg=TitleGreen}
+    \setbeamercolor{structure}{fg=UniGreen} 
+    \setbeamercolor{item projected}{bg=UniGreen, fg=white} %define color of the item-bullets
+    \setbeamercolor{button}{bg=UniGreen}
+
+    \setbeamertemplate{section in head/foot}{\hfill\protect\tikz\protect\node[rectangle,fill=SectionBox!90,rounded corners=1pt,inner sep=1pt,] {\textcolor{white}{\insertsectionhead}};}
+    \setbeamertemplate{section in head/foot shaded}{\textcolor{structure!40}{\hfill\insertsectionhead}}
+
+    \setbeamertemplate{headline}{%
+\leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1.125ex]{palette quaternary}%
+    \insertsectionnavigationhorizontal{\paperwidth}{}{\hskip0pt plus1filll}
+    \end{beamercolorbox}%
+  }
+}
+
+\insertsectionnavigationhorizontal{\paperwidth}{\hskip0pt plus1filll}{\hskip0pt plus1filll}
+
+
+% ---
+
+% --- Informações do documento ---
+\title{Algoritmo de Tomasulu}
+% ---
+
+% ----------------- INÍCIO DO DOCUMENTO --------------------------------------
+\begin{document}
+    % ----------------- NOVO SLIDE --------------------------------
+    \begin{frame}
+
+    \titlepage
+
+    \end{frame}
+
+    \import{./}{modelo.tex}
+
+    \import{./}{simulacao.tex}
+
+% ----------------- FIM DO DOCUMENTO -----------------------------------------
+\end{document}

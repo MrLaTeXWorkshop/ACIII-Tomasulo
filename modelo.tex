@@ -1,0 +1,124 @@
+    % ----------------- NOVO SLIDE --------------------------------]
+    \section{Teoria}
+
+    \begin{frame}
+        
+        \begin{center}
+
+            \begin{flushleft}
+                \footnotesize
+                31 \hspace{2.95cm} 20 19 \hspace{1.52cm} 15 14 \hspace{1.50cm} 12 11 \hspace{1.70cm} 7 6 \hspace{2cm} 0
+                \normalsize
+            \end{flushleft}
+            
+            \begin{tabular}{ | p{3cm} | p{2cm} | p{2cm} | p{2cm} | p{2cm} | }
+                \hline
+                imm[11:0] & rs1 & funct3 & rd & opcode \\
+                \hline
+            \end{tabular}
+            \begin{tabular}{p{3cm} p{2cm} p{2cm} p{2cm} p{2cm}}
+             12 & 5 & 3 & 5 & 7 \\ 
+             offset[11:0] & base & width & dest & LOAD    
+            \end{tabular}
+
+        \end{center}
+
+        \comment{
+
+            \pause
+
+            \begin{center}
+
+                \begin{flushleft}
+                    \footnotesize
+                    31 \hspace{1.58cm} 25 24 \hspace{0.50cm} 20 19 \hspace{1.32cm} 15 14 \hspace{1.32cm} 12 11 \hspace{1.50cm} 7 6 \hspace{2cm} 0
+                    \normalsize
+                \end{flushleft}
+
+                \begin{tabular}{ | p{2cm} | p{1cm} | p{2cm} | p{2cm} | p{2cm} | p{2cm} | }
+                    \hline
+                    imm[11:0] & rs2 & rs1 & funct3 & rd & opcode \\
+                    \hline
+                \end{tabular}
+                \begin{tabular}{p{3cm} p{2cm} p{2cm} p{2cm} p{2cm}}
+                12 & 5 & 3 & 5 & 7 \\ 
+                offset[11:0] & base & width & dest & LOAD    
+                \end{tabular}
+
+            \end{center}
+
+        }
+
+    \end{frame}
+
+    \begin{frame}{Operações de divisão}
+
+        \begin{center}
+
+            \begin{flushleft}
+                \footnotesize
+                31 \hspace{1.72cm} 25 24 \hspace{0.55cm} 20 19 \hspace{1.48cm} 15 14 \hspace{1.52cm} 12 11 \hspace{1.70cm} 7 6 \hspace{2cm} 0
+                \normalsize
+            \end{flushleft}
+
+            \begin{tabular}{ | p{2cm} | p{1cm} | p{2cm} | p{2cm} | p{2cm} | p{2cm} | }
+                \hline
+                funct7 & rs2 & rs1 & funct3 & rd & opcode \\
+                \hline
+            \end{tabular}
+            \begin{tabular}{ p{2cm} p{1cm} p{2cm} p{2cm} p{2cm} p{2cm}}
+            7 & 5 & 5 & 3 & 5 & 7 \\ 
+            MULDIV & divisor & dividend & DIV & dest & OP 
+            \end{tabular}
+
+        \end{center}
+
+    \end{frame}
+
+    \begin{frame}{Integer Register-Immediate Instructions}
+
+        \begin{center}
+
+            \begin{flushleft}
+                \footnotesize
+                31 \hspace{2.95cm} 20 19 \hspace{1.52cm} 15 14 \hspace{1.50cm} 12 11 \hspace{1.70cm} 7 6 \hspace{2cm} 0
+                \normalsize
+            \end{flushleft}
+            
+            \begin{tabular}{ | p{3cm} | p{2cm} | p{2cm} | p{2cm} | p{2cm} | }
+                \hline
+                imm[11:0] & rs1 & funct3 & rd & opcode \\
+                \hline
+            \end{tabular}
+            \begin{tabular}{p{3cm} p{2cm} p{2cm} p{2cm} p{2cm}}
+             12 & 5 & 3 & 5 & 7 \\ 
+             I-immediate[11:0] & src & ADDI & dest & OP-IMM 
+            \end{tabular}
+
+        \end{center}
+
+    \end{frame}
+
+    \begin{frame}{Integer Register-Immediate Instructions}
+
+        \begin{center}
+
+            \begin{flushleft}
+                \footnotesize
+                \hspace{0.5cm} 15 \hspace{2.85cm} 13 12 \hspace{1.52cm} 10 9 \hspace{1.85cm} 7 6 \hspace{1.9cm} 2 1 \hspace{1cm} 0
+                \normalsize
+            \end{flushleft}
+            
+            \begin{tabular}{ | p{2.95cm} | p{2cm} | p{2cm} | p{2cm} | p{1cm} | }
+                \hline
+                funct3 & imm & rs1 & imm & op \\
+                \hline
+            \end{tabular}
+            \begin{tabular}{p{2.95cm} p{2cm} p{2cm} p{2cm} p{1cm}}
+             3 & 3 & 3 & 5 & 2 \\ 
+             BNEZ & offset[8|4:3] & src & offset & CI 
+            \end{tabular}
+
+        \end{center}
+
+    \end{frame}
